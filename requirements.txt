@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+celery
+redis
+httpx
+loguru
+pytest
+python-dotenv 
+streamlit
+requests
