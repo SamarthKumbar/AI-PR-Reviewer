@@ -13,7 +13,6 @@ An intelligent assistant that automatically reviews GitHub pull requests using L
 ## Features
 
 - FastAPI-based backend for API and task orchestration  
-- LangChain-powered analysis pipeline using GPT-4  
 - Celery + Redis for background processing  
 - Streamlit frontend to trigger and visualize PR reviews  
 - Rate limiting and caching using Redis  
@@ -48,8 +47,8 @@ pip install -r requirements.txt
 Create a `.env` file using the provided template:
 
 ```
-REDIS_URL=""
-API_KEY=""
+REDIS_URL=redis://localhost:PORT/0
+LLM_API_KEY=""
 ```
 
 ---
