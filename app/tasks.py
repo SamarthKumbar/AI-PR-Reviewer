@@ -14,16 +14,16 @@ def get_cache_key(repo_url: str, pr_number: int):
 
 @celery_app.task(name="app.tasks.analyze_pr_task")
 def analyze_pr_task(repo_url, pr_number, github_token=None):
-    logger.info(f"Task {analyze_pr_task.request.id}: Starting analysis...")
+    logger.info(f"Task {analyze_pr_task.request.id}: Starting analysis")
     cache_key = get_cache_key(repo_url, pr_number)
 
     cached = redis_client.get(cache_key)
     if cached:
-        print("Cache hit")
+        logger.info("Cache hit")
         store_task_status(pr_number)
         return json.loads(cached)
 
-    print("Cache miss. Computing result...")
+    logger.info("Cache miss")
     try:
         diff = fetch_pr_diff(repo_url, pr_number, github_token)
         logger.info(f"Task {analyze_pr_task.request.id}: Fetched diff (len={len(diff)})")
