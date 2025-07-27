@@ -26,8 +26,8 @@ An intelligent assistant that automatically reviews GitHub pull requests using *
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ai-pr-reviewer.git
-cd ai-pr-reviewer
+git clone https://github.com/SamarthKumbar/AI-PR-Reviewer.git
+cd AI-PR-Reviewer
 
 2. Set up virtual environment
 python -m venv venv
@@ -43,18 +43,22 @@ API_KEY=""
 
 
 Running the System
- Backend API (FastAPI)
+
+Backend API (FastAPI)
 
 uvicorn app.main:app --reload --port 8002
- Background Task Worker (Celery)
+
+Background Task Worker (Celery)
 
 celery -A app.celery_worker worker --loglevel=info --pool=solo
- Redis Server
+
+Redis Server
 
 docker run -p 6379:6379 redis
 
 Streamlit Frontend
- streamlit run UI.py
+
+streamlit run UI.py
 
 
 API Documentation
