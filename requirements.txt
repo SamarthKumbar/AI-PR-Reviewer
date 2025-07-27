@@ -8,4 +8,4 @@ pytest
 python-dotenv 
 streamlit
 requests
-openai
+openai==0.28.1
