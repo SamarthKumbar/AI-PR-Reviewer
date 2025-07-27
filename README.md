@@ -47,7 +47,7 @@ pip install -r requirements.txt
 Create a `.env` file using the provided template:
 
 ```
-REDIS_URL=redis://localhost:PORT/0
+REDIS_URL=redis://localhost:6379/0
 LLM_API_KEY=""
 ```
 
