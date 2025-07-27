@@ -146,3 +146,5 @@ Tests are located in the `tests/` folder and include:
 - Automatically comment review on GitHub PR  
 - LLM finetuning or RAG for enterprise-level performance  
 - CI/CD integration and better test coverage  
+
+![PR Analyzer](image.png)
