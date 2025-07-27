@@ -1,12 +1,18 @@
-import openai
-import  json
+
+from openai import OpenAI
+import json
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-openai.api_key = os.getenv("API_KEY")
-openai.api_base = "https://api.groq.com/openai/v1"
+
+client = OpenAI(
+    api_key=os.getenv("API_KEY"),
+    base_url="https://api.groq.com/openai/v1"
+)
+# openai.api_key = os.getenv("API_KEY")
+# openai.api_base = "https://api.groq.com/openai/v1"
 
 
 PROMPT_TEMPLATE = """
@@ -43,7 +49,7 @@ Only return valid JSON. Do not include markdown or explanations.
 def summarize_and_review_diff(diff):
     """Analyzes a code diff using an LLM and returns a structured review."""
     try:
-        response =  openai.ChatCompletion.create(
+        response =  client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[{
                 "role": "user",
