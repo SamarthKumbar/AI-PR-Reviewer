@@ -40,7 +40,6 @@ if st.button("Analyze PR"):
                     status = status_res.json().get("status", "pending")
 
                     if status == "completed":
-                        st.success("Analysis completed!")
                         break
                     elif status == "failed":
                         st.error("Analysis failed.")
@@ -58,10 +57,6 @@ if st.button("Analyze PR"):
 
             st.subheader("📋 Summary")
             st.json(result.get("summary", {}))
-
-            st.subheader("📝 Review")
-            review = result.get("review", "")
-            st.code(review if review else "No review comments.")
 
             st.subheader("📄 PR Info")
             st.write(f"Repo: {result.get('repo_url')}")
