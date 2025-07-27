@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import time
 
-API_BASE = "http://localhost:8003"  # Change this if your FastAPI runs elsewhere
+API_BASE = "http://localhost:8003" 
 
 st.set_page_config(page_title="PR Analyzer", layout="centered")
 
