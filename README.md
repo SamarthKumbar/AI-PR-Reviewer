@@ -147,3 +147,8 @@ Tests are located in the `tests/` folder and include:
 - CI/CD integration and better test coverage  
 
 ![PR Analyzer](image.png)
+
+![Summary](image2.png)
+
+![Info](image3.png)
+
