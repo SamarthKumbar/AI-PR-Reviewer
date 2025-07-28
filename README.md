@@ -1,6 +1,6 @@
 # AI-PR-Reviewer
 
-An intelligent assistant that automatically reviews GitHub pull requests using LangChain and GPT-4. It performs deep analysis on PR diffs and provides feedback on:
+An intelligent assistant that automatically reviews GitHub pull requests using Open source LLMs. It performs deep analysis on PR diffs and provides feedback on:
 
 - Code style and formatting issues  
 - Potential bugs or logic errors  
