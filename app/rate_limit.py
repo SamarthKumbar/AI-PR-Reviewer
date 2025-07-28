@@ -3,7 +3,7 @@
 from fastapi import Request, HTTPException
 from app.redis_client import redis_client  
 
-RATE_LIMIT = 2        
+RATE_LIMIT = 10       
 WINDOW_SECONDS = 60      
 
 def get_client_ip(request: Request) -> str:
