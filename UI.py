@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import time
 
-API_BASE = "https://ai-pr-reviewer-production-4538.up.railway.app" 
+API_BASE = "https://ai-pr-reviewer-production-3270.up.railway.app" 
 #API_BASE = "http://localhost:8003" 
 
 
